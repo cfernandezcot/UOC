@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@800&display=swap');
+
+/*ESTILOS PARA ESCRITORIO WEB*/
+
+/*Estilos (clases) generales*/
+.home{
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    text-align: justify;
+    flex-direction: column;
+}
+
+.titulos{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Esto es paara hacer que las cajas te lleven a su posible pagina en el div padre de este se debe añadir un position 
+relative (creo que aun no se puede hacer eso en CSS3)*/
+.link-caja {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:10;
+}
+/*Fin*/
+
+/*Estilos para la cabecera*/
+.cabecera{
+    background-color: rgb(154, 235, 134);
+    width: 100%;
+    height: 665px;
+    background-image: url(../images/animales/Dogs-Dog_11.svg), url(../images/hero_image_bg.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 450px, 800px;
+    background-position: bottom right 150px, bottom right;
+}
+
+/*Esto es el navegador*/
+.navegador{
+    height: 115px;
+}
+
+/*Agrego la clase que hara que cuando se haga scroll el navegador baje*/
+
+.navegador-scroll{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 110px;
+    max-width: 1440px;
+    z-index: 1000;
+    top: 0;
+    overflow: hidden;
+}
+
+/*Fin del navegador scroll*/
+/*Para que los elementos del navegador de movil no sean visbles*/
+.nav-mo{
+    display: none;
+}
+
+/************************************/
+.navegador > ul{
+    list-style: none;
+    margin: 10px;
+    padding: 0px 30px 0px 280px;
+    position: relative;
+    bottom: 95px;
+}
+
+.navegador .logo > img{
+    width: 250px;
+    height: 125px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.navegador > ul li{
+    float: left;
+}
+
+.navegador > ul li a{
+    display:block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navegador > ul li a:hover:not(.btn){
+    color: rgb(95, 81, 216);
+}
+
+.navegador > ul li:last-child{
+    float: right;
+}
+
+.btn{
+    background-color: white;
+    font-weight: 500;
+    border-width: 2px;
+    border-color: blue;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.btn:active{
+    background-color: blue;
+    color:white;
+}
+
+/*Fin del navegador*/
+
+/*Estilos presentacion*/
+span:first-child{
+    color: white;
+}
+
+.presentacion{
+    width: 550px;
+    height: 400px;
+    padding: 30px 30px;
+}
+
+.presentacion > h1{
+    font-size: 55px;
+    line-height: 70px;
+}
+
+.presentacion > p{
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+
+.buscador{
+    vertical-align: middle;
+    width: 400px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.buscador input#search{
+    width: 450px;
+    height: 50px;
+    background: white;
+    border: solid 1px;
+    border-radius: 7px;
+    border-color: blue;
+    float: left;
+    color: rgb(133, 128, 136);
+    padding-left: 55px;
+    margin-top: -45px;
+    font-size: 15px;
+}
+
+.buscador .icon-s{
+    margin-left: 10px;
+}
+
+/*Fin de la presentacion*/
+/*Estilos para el main*/
+
+.main-home .titulos{
+    font-size: 35px;
+    padding: 30px;
+}
+
+.cont-fcajas{
+    padding: 0px 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 55px 15px;
+    justify-content: space-between;
+}
+
+.fcaja{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px rgb(122, 118, 124);
+    margin:auto;
+}
+
+.fcaja >img{
+    margin: 0px;
+    padding: 0px;
+    flex-basis: content;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fcaja > div{
+    padding: 0px 15px 15px 15px;
+ }
+.fcaja h3{
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+.fcaja > div span{
+    color:rgb(133, 128, 136);
+}
+
+.icono-caja{
+    padding: 0px 7px;
+    float: right;
+    position: relative;
+    bottom: 10px;
+}
+
+.fcaja:hover{
+    box-shadow: 5px 5px 20px rgb(149, 137, 255);   
+}
+
+
+/*Fin main*/
+/*Estilos para el footer*/
+
+.cont-pie{
+    background-color: rgb(154, 235, 134);
+    background: linear-gradient(0deg, rgba(139,255,115,1) 36%, rgba(244,255,174,1) 100%);
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px;
+    justify-content: space-between;
+}
+
+.opciones-pie {
+    padding: 20px 0px;
+    position: relative;
+    margin: auto;
+}
+
+.opciones-pie img{
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.opciones-pie h4{
+    text-align: center;
+    margin: 15px 0px 5px 0px;
+}
+
+.opciones-pie blockquote{
+    font-size: 15px;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+
+.pie-nav{
+    background-color: rgb(95, 81, 216);
+    height: 70px;
+}
+
+.pie-nav > ul{
+    margin: 0px 30px;
+    padding:  25px;
+    list-style: none;
+}
+
+.pie-nav > ul li:first-child{
+    float: left;
+}
+
+.pie-nav > ul li{
+    float: right;
+}
+
+.pie-nav > ul li a{
+    display:inline;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/*ESTILOS PARA Tables (vertical)*/
+
+@media (min-width:770px) and (max-width:1100px){
+
+    /* Cambios a la cabecera y al navegador, lo que he hecho a sido hacer el menu más pequeño y he cambiado la imagen
+    de fondo del perro cuando es para tablet y asi que se pueda leer el texto mejor*/
+
+    .cabecera{
+        background-image: url(../images/animales/Dog-14.svg), url(../images/hero_image_bg.svg);
+        background-size: 450px, 700px;
+        background-position: bottom right 100px, bottom right;
+
+    }
+
+    .navegador .logo > img{
+        width: 200px;
+    }
+        
+    .navegador > ul{
+        padding-left: 230px;
+    }
+
+    .navegador > ul li a{
+        padding: 10px 15px;
+    }
+
+    /*Para la tablet no he cambiado el main, porque creo que ya solo se cola de forma correcta*/
+    /*En el pie de pagina sin embargo en mi opinion se juntan mucho los elemtos de adoptame etc. por eso he hecho 
+    que se puedan separar*/
+
+    .cont-pie{
+        flex-wrap: wrap;
+    }
+    
+}
+
+/*Para smartphones*/
+
+@media (min-width:320px) and (max-width: 769px){
+
+    /*Lo primero que he hecho a sido hacer un menu desplegable (de momento como no tengo ningun icono uso una palabra)
+    pero lo arreglare en la futura PEC*/
+    .nav-mo{
+        padding: 5px;
+        margin: 30px;
+        width: 70px;
+        display:block;
+        float: right;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .navegador >ul{
+        width: 40%;
+        height: 100%;
+        background-color: white;
+        right: 100%;
+        margin: 0;
+        padding: 25px 20px 0px 0px;
+        top: 0px;
+        position:fixed;
+    }
+
+    .navegador >ul li{
+        padding: 10px 0 10px 0;
+        float: none;
+
+    }
+
+    .btn{
+        display: block;
+        margin: auto;
+        width: 52%;
+    }
+
+    .navegador > ul li:last-child{
+        padding-left: 15px;
+    }
+
+    .navegador .logo{
+        display: none;
+    }
+
+    .navegador > ul li:last-child{
+        float: none;
+    }
+
+
+    
+    /*La cabecera es igual que en tablet*/
+    .cabecera{
+        background-image: url(../images/animales/Dog-14.svg), url(../images/hero_image_bg.svg);
+        background-size: 450px, 800px;
+        background-position: bottom right 50%;
+    }
+
+    .presentacion{
+        margin: 50px 15px;
+        width: auto;
+        text-align: center;
+        padding: 0px 15px;
+        position:static;
+    }
+
+    .buscador{
+        width: 100%;
+        margin-top: 50px;
+        position: static;
+    }
+
+    .buscador input#search{
+        width: 100%;
+        float: left;
+    }
+    
+    .buscador .icon-s{
+        position: relative;
+        bottom: 2px;
+        float:left;
+    }
+
+
+    /*footer*/
+    .cont-pie{
+        flex-direction: column;
+    }
+
+    
+    .pie-nav > ul{
+        margin: auto;
+        padding:  25px;
+    }
+
+    .pie-nav > ul li a{
+        padding: 5px;
+        font-size: 12px;
+    }
+}
